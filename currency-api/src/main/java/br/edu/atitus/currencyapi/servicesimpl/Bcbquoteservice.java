@@ -21,13 +21,13 @@ import java.util.Optional;
  * quando a chamada passa pelo proxy do Spring (auto-invocação dentro da mesma classe ignora-as).
  */
 @Service
-public class BcbQuoteService {
+public class Bcbquoteservice {
 
-    private static final Logger log = LoggerFactory.getLogger(BcbQuoteService.class);
+    private static final Logger log = LoggerFactory.getLogger(Bcbquoteservice.class);
 
     private final BcbClient bcbClient;
 
-    public BcbQuoteService(BcbClient bcbClient) {
+    public Bcbquoteservice(BcbClient bcbClient) {
         this.bcbClient = bcbClient;
     }
 
