@@ -25,7 +25,7 @@ public class CurrencyServiceJpa implements CurrencyService {
     private static final DateTimeFormatter BCB_DATE_FORMAT = DateTimeFormatter.ofPattern("MM-dd-yyyy");
 
     private final CurrencyRepository repository;
-    private final Bcbquoteservice bcbQuoteService;
+    private final BcbQuoteService bcbQuoteService;
     private final String bcbQuoteDate;
 
     @Value("${server.port:8080}")
@@ -33,7 +33,7 @@ public class CurrencyServiceJpa implements CurrencyService {
 
     public CurrencyServiceJpa(
             CurrencyRepository repository,
-            Bcbquoteservice bcbQuoteService,
+            BcbQuoteService bcbQuoteService,
             // Data fixa (dia útil com cotação) conforme permitido no enunciado. Formato ISO: yyyy-MM-dd
             @Value("${app.bcb.quote-date:2025-10-10}") String quoteDate) {
         this.repository = repository;
