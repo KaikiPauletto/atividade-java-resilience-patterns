@@ -27,6 +27,7 @@ consul kv put config/application/management.endpoint.health.show-details "always
 consul kv put config/application/management.health.livenessstate.enabled "true"
 consul kv put config/application/management.health.readinessstate.enabled "true"
 consul kv put config/application/management.health.db.enabled "true"
+consul kv put config/application/spring.cloud.consul.discovery.hostname "localhost"
 
 REM Configuração do Retry
 consul kv put config/product-api/resilience4j.retry.instances.currency-api.max-attempts "3"
